@@ -20,8 +20,14 @@ class Fighter {
         this.defense = defense
     }
 
+    // Encapsulation 
     attack(){
-        let damage = this.strength - defender.defense
+        let damage = Math.floor((Math.random * fighter.strength) - defender.defense)
         console.log(`Attacker did ${damage} to ${defender}, ${defender} now has ${this.health}`)
     }
+}
+
+
+while (fighter.health >= 0) {
+    Fighter()
 }

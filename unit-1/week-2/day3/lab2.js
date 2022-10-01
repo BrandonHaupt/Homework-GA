@@ -117,3 +117,24 @@ class Pokemon {
 const charmander = new Pokemon("Charmander", "fire", "50lb")
 const squirtle = new Pokemon("Squirtle", "water", "60lb")
 const bulbasaur = new Pokemon("Bulbasaur", "grass", "55lb")
+
+console.log(charmander)
+
+class Person {
+    constructor(firstName, lastName){
+        this.firstName = firstName
+        this.lastName = lastName
+    }
+
+    greet(friend){
+        console.log(`Hello ${friend}, my name is ${this.firstName}`)       
+    }
+}
+
+const frank = new Person("Frank", "Lee")
+
+frank.greet("Tom")
+
+const gabby = new Person("Gabby", "Gab")
+
+gabby.greet("Phoenix")
