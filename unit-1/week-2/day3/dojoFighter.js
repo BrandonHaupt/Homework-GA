@@ -15,6 +15,9 @@ class Fighter {
         let damage = Math.floor(((Math.random() * fighter.strength) + fighter.strength) - defender.defense)
         // getting the health after the damage
         let health = fighterHealth - damage
+
+        fighterHealth -= damage
+
         // console
         console.log(`Attacker ${fighter.name} did ${damage} to defender ${defender.name}, ${defender.name} now has ${health} health`)
         // console.log(damage)
@@ -45,15 +48,16 @@ console.log(`Current health: ${defenderHealth}`)
 
 for (let i = 0; i < fighterHealth; i++) {
     // const ele = array[i];
-    if (fighterHealth > 0 || defenderHealth > 0) {
+    if (fighterHealth >= 0 || defenderHealth >= 0) {
         fighter.attackDefender()
         defender.attackFighter()
-    } else if(fighterHealth === 0){
-        return `${fighter.name} has defeated ${defender.name}`
-    } else if(defenderHealth === 0){
-        return `${defender.name} has defeated ${fighter.name}`
-    } else {
-        return `Something went wrong...`
+        console.log(`Fighters current health is: ${fighterHealth}`)
+        console.log(`Defenders current health is: ${defenderHealth}`)
+        if(fighterHealth === 0){
+            return `${fighter.name} has defeated ${defender.name}`
+        } else if(defenderHealth === 0){
+            return `${defender.name} has defeated ${fighter.name}`
+        }
     }
 }
 
