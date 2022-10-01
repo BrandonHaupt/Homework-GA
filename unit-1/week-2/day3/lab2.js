@@ -33,24 +33,74 @@ const tom = {
 
 tom.eat()
 
-const dog = {
-    legs: 4,
-    ears: 2,
-    sound: "Bark"
-}
+// const dog = {
+//     legs: 4,
+//     ears: 2,
+//     sound: "Bark"
+// }
 
-const pig = {
-    legs: 4,
-    ears: 2,
-    sound: "Oink"
-}
+// const pig = {
+//     legs: 4,
+//     ears: 2,
+//     sound: "Oink"
+// }
 
-const cow = {
-    legs: 4,
-    ears: 2,
-    sound: "Moo"
-}
+// const cow = {
+//     legs: 4,
+//     ears: 2,
+//     sound: "Moo"
+// }
 
+// Defines a new class (a Class is a blueprint to make an object)
 class Animal {
-
+    // Defines the 'constructor' (what every object you 'build' based on this blueprint)
+    // All animals have: ears, legs, and a sound they make
+    constructor(sound, ears, legs, tail) {
+        // Setting "this" specific instance of a object to the ones passed when calling this class (kinda like a function)
+        this.sound = sound;
+        this.ears = ears;
+        this.legs = legs;
+        this.tail = tail
+        
+    }
+    // Puts a function into the blueprint(class) 
+    makeSound() {
+        //Prints whatever is logged in "this" specific object 
+        console.log(this.sound)
+    }
 }
+
+// Use 'polymorphism' to use the class(blueprint) to create new objects
+// variableName = new ClassName(argument1, argument2, argument3) 
+const dog = new Animal("bark", 2, 4);
+const pig = new Animal("oink", 2, 4);
+const cow = new Animal("moo", 2, 4);
+const giraffe = new Animal("REeeeee", 2, 4, true)
+// Amount of arguments depends on how many you put in the constructor above
+
+
+// Should print out each object, based on the class(blueprint)
+// console.log(dog, pig, cow);
+
+// Should make the sound for that specific animal
+// dog.makeSound();
+// pig.makeSound();
+// cow.makeSound();
+
+console.log(giraffe)
+
+class Human {
+    constructor(fingers, arms, legs, feet, head, torso, eyes){
+        this.fingers = fingers
+        this.arms = arms
+        this.legs = legs
+        this.feet = feet
+        this.head = head
+        this.torso = torso
+        this.eyes = eyes
+    }
+}
+
+const darren = new Human(10, 2, 2, 2, 1, 1, 2)
+
+console.log(darren)
