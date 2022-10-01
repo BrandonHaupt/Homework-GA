@@ -38,7 +38,7 @@ class Fighter {
 }
 
 const fighter = new Fighter("Frank", 10, 5, 2)
-const defender = new Fighter("Defender", 10, 5, 2)
+const defender = new Fighter("Steve", 10, 5, 2)
 
 console.log(`Current health: ${defenderHealth}`)
 // while (fighterHealth >= 0 || defenderHealth >= 0) {
