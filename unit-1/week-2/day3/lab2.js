@@ -104,3 +104,16 @@ class Human {
 const darren = new Human(10, 2, 2, 2, 1, 1, 2)
 
 console.log(darren)
+
+
+class Pokemon {
+    constructor(name, type, weight){
+        this.name = name
+        this.type = type
+        this.weight = weight
+    }
+}
+
+const charmander = new Pokemon("Charmander", "fire", "50lb")
+const squirtle = new Pokemon("Squirtle", "water", "60lb")
+const bulbasaur = new Pokemon("Bulbasaur", "grass", "55lb")
