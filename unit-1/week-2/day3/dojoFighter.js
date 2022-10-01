@@ -43,6 +43,22 @@ console.log(`Current health: ${defenderHealth}`)
 //     defender.attackFighter()
 // }
 
+for (let i = 0; i < fighterHealth; i++) {
+    // const ele = array[i];
+    if (fighterHealth > 0 || defenderHealth > 0) {
+        fighter.attackDefender()
+        defender.attackFighter()
+    } else if(fighterHealth === 0){
+        return `${fighter.name} has defeated ${defender.name}`
+    } else if(defenderHealth === 0){
+        return `${defender.name} has defeated ${fighter.name}`
+    } else {
+        return `Something went wrong...`
+    }
+}
+
+
+
 // console.log(fighter.attack())
-fighter.attackDefender()
-defender.attackFighter()
+// fighter.attackDefender()
+// defender.attackFighter()
