@@ -54,9 +54,11 @@ for (let i = 0; i < fighterHealth; i++) {
         console.log(`Fighters current health is: ${fighterHealth}`)
         console.log(`Defenders current health is: ${defenderHealth}`)
         if(fighterHealth === 0){
-            return `${fighter.name} has defeated ${defender.name}`
+           console.log(`${fighter.name} has defeated ${defender.name}`)
         } else if(defenderHealth === 0){
-            return `${defender.name} has defeated ${fighter.name}`
+            console.log(`${defender.name} has defeated ${fighter.name}`)
+        } else {
+            console.log(`I don't know what's going on`)
         }
     }
 }
