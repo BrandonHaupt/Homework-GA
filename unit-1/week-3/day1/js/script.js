@@ -1,5 +1,5 @@
 let titleEl = document.getElementById(`title`)
-let pEl = document.querySelector('.cool')
+let pEl = document.querySelector(".cool")
 
 
 titleEl.style.textAlign = `center`
