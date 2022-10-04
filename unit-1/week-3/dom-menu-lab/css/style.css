@@ -41,3 +41,12 @@ nav a {
     background-color: var(--sub-menu-bg);
 }
 
+.mainEl {
+    background-color: var(--main-bg);
+}
+
+.topMenuEl {
+    height: 100%;
+    background-color: var(--top-menu-bg);
+    justify-content: space-around;
+}
