@@ -48,5 +48,6 @@ nav a {
 .topMenuEl {
     height: 100%;
     background-color: var(--top-menu-bg);
+    display: flex;
     justify-content: space-around;
 }
