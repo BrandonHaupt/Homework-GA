@@ -1,7 +1,8 @@
+// Assign an DOM node to a variable
 let titleEl = document.getElementById(`title`)
 let pEl = document.querySelector(".cool")
+let p = document.querySelector('p')
 
-
-titleEl.style.textAlign = `center`
+console.log(p)
 console.log(pEl)
-console.log(titleEl)
+titleEl.style.textAlign = `center`
