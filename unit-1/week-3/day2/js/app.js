@@ -15,5 +15,7 @@ function handleClick(){
 firstButton.addEventListener("click", handleClick)
 
 
+
+
 console.log(counter)
 console.log(firstButton)
