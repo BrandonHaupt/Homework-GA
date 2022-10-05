@@ -5,3 +5,8 @@
 .blue {
     color: #035efc;
 }
+
+img {
+    height: contain;
+    width: 400px;
+}

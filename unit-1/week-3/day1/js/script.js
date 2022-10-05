@@ -24,7 +24,29 @@ rh1.classList.add('blue')
 
 // Create an image and set its source attribute
 const img = document.createElement('img')
+img.setAttribute('src', "https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1150&q=80")
+
+p.append(img)
 console.log(img)
+
+// Select ALL Li's
+const lis = document.querySelectorAll('li')
+console.log(lis)
+
+for (let li of lis) {
+    li.classList.add('blue')
+}
+
+
+const chipmunks = ["Alvin", "Theodore", "Simon"]
+
+const ul = document.querySelector("ul")
+
+for (const chipmunk of chipmunks) {
+    const newLi = document.createElement("li")
+    newLi.innerText = chipmunk
+    ul.append(newLi)
+}
 
 
 
