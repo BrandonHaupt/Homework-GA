@@ -16,8 +16,17 @@ p.innerHTML = 'I am the new text'
 
 // Editing the style
 gh1.style.color = 'green'
-rh1.style.color = "red"
+// rh1.style.color = "red"
 body.style.fontFamily = "arial"
+
+// Setting the classes on a node
+rh1.classList.add('blue')
+
+// Create an image and set its source attribute
+const img = document.createElement('img')
+console.log(img)
+
+
 
 // Console logs
 console.log(p)
