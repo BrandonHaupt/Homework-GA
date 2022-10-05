@@ -11,7 +11,7 @@ let menuLinks = [
 
 for (let link of menuLinks) {
     const newA = document.createElement("a")
-    newA.setAttribute('href', menuLinks.href)
+    newA.setAttribute('href', link.href)
     newA.innerText = link.text
     nav.append(newA)
 }
