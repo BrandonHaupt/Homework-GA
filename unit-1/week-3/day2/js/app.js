@@ -14,8 +14,18 @@ function handleClick(){
 
 firstButton.addEventListener("click", handleClick)
 
+// Store the blocks in variables
+const blackBlock = document.querySelector(".bubble")
+const orangeBlock = document.querySelector(".bubble div")
 
+console.log(orangeBlock)
+console.log(blackBlock)
 
+blackBlock.addEventListener("click", function(){
+    console.log(counter += 1)
+})
 
-console.log(counter)
-console.log(firstButton)
+orangeBlock.addEventListener("click", function(event) {
+    event.stopPropagation() // prevent bubbling (prevents you from clicking black block as well)
+    console.log("Orange Block")
+})
