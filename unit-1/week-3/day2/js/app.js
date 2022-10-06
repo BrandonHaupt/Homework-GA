@@ -29,3 +29,11 @@ orangeBlock.addEventListener("click", function(event) {
     event.stopPropagation() // prevent bubbling (prevents you from clicking black block as well)
     console.log("Orange Block")
 })
+
+// Keyboard events
+window.addEventListener("keydown", function(event){
+    console.log(event)
+    if(event.ctrlKey && event.key === "g"){
+        alert("G was pressed")
+    }
+})
