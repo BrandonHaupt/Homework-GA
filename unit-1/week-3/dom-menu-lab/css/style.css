@@ -5,7 +5,7 @@
 :root {
     --main-bg: #4a4e4d;
     --top-menu-bg: #0e9aa7;
-    --sub-menu-bg: #3da4ab;
+    --sub-menu-bg: #47c7d0;
 }
 
 body {
@@ -50,4 +50,38 @@ nav a {
     background-color: var(--top-menu-bg);
     display: flex;
     justify-content: space-around;
+}
+
+/* ============ sub nav ================ */
+
+header, #top-menu{
+    position: relative;
+}
+
+#top-menu {
+    z-index: index 20;
+}
+
+#sub-menu {
+    width: 100%;
+    z-index: 10;
+    transition: top .5s ease-out;
+}
+
+#sub-menu a:hover {
+    background-color: var(--top-menu-bg);
+}
+
+nav a.active {
+    background-color: var(--sub-menu-bg);
+    color: var(--main-bg);
+}
+
+.subMenuEl {
+    height: 100%;
+    background-color: var(--sub-menu-bg);
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
 }
