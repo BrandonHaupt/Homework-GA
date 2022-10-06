@@ -21,7 +21,7 @@ let menuLinks = [
     ]},
   ]
 
-//   let topMenuLinks
+let topMenuLinks = aLink
 
 let showingSubMenu = false
 
@@ -31,3 +31,12 @@ for (let link of menuLinks) {
     newA.innerText = link.text
     nav.append(newA)
 }
+
+topMenuLinks.addEventListener("click", function(event) {
+    event.stopPropagation()
+    if (condition) {
+        
+    }
+})
+
+console.log(topMenuLinks)

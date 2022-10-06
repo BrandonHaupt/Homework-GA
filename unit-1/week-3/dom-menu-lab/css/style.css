@@ -84,4 +84,5 @@ nav a.active {
     justify-content: space-around;
     position: absolute;
     top: 0;
+    opacity: 0;
 }
