@@ -1,23 +1,24 @@
 const firstButton = document.querySelector(".click-events button")
 
+
 let counter = 0
 
 // firstButton.onclick = function(){
-//     alert(`This works!`)
-// }
-
-//add a click event - method 2
-//This way you usually do it
-function handleClick(){
-    alert("Wuba luba dub dub")
-}
-
-firstButton.addEventListener("click", handleClick)
-
-// Store the blocks in variables
-const blackBlock = document.querySelector(".bubble")
-const orangeBlock = document.querySelector(".bubble div")
-
+    //     alert(`This works!`)
+    // }
+    
+    //add a click event - method 2
+    //This way you usually do it
+    function handleClick(){
+        alert("Wuba luba dub dub")
+    }
+    
+    firstButton.addEventListener("click", handleClick)
+    
+    // Store the blocks in variables
+    const blackBlock = document.querySelector(".bubble")
+    const orangeBlock = document.querySelector(".bubble div")
+    
 console.log(orangeBlock)
 console.log(blackBlock)
 
@@ -36,4 +37,14 @@ window.addEventListener("keydown", function(event){
     if(event.ctrlKey && event.key === "g"){
         alert("G was pressed")
     }
+})
+
+const form = document.querySelector('form')
+const input = document.querySelector("input[type='text']")
+
+form.addEventListener('submit', function(event){
+    // prevents refresh
+    event.preventDefault() 
+    
+    console.log(input.value)
 })

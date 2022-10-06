@@ -57,5 +57,5 @@ form input {
 }
 
 form input[type="text"] {
-    border: 5px dotted white
+    border: 4px dashed orangered;
 }
