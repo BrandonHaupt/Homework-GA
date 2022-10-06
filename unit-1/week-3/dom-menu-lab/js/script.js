@@ -21,7 +21,7 @@ let menuLinks = [
     ]},
   ]
 
-let topMenuLinks = aLink
+const topMenuLinks = topMenuEl.querySelector('a')
 
 let showingSubMenu = false
 
