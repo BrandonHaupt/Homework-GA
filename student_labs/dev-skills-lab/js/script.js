@@ -1,6 +1,6 @@
 // Created an object to hold the Users skills
 const skill = {
-    skills: ["Skill 1", "Skill 2"]
+    skills: []
 }
 
 // make an object to hold our DOM nodes
