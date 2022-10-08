@@ -26,7 +26,17 @@ function renderSkills() {
         // appending the items to the DOM
         $nodes.div.append($skillDiv)
 
-        $skillDiv.on("")
+        $skillDiv.on("click", function(event){
+            // grabbing the text
+            const text = $(event.target).text()
+
+            // assigning our selected text to index
+            const index = skill.skills.indexOf(text)
+
+            // removing the text/input if we want by clicking
+            skill.skills.splice(index, 1)
+            renderSkills()
+        })
     }
 }
 

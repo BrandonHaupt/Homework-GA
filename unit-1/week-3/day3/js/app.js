@@ -90,7 +90,8 @@ const $li2 = $("<li>").text("2")
 $li3.before($li2)
 
 //create an li with the text of "4" and append it to the ul so that it is after 3 and before 5
-// more condensed version of below - $li3.after($("<li>")).text("4")
+// more condensed version of below - 
+//$li3.after($("<li>")).text("4")
 const $li4 = $("<li>").text("4")
 $li3.after($li4)
 
