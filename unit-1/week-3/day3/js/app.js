@@ -26,7 +26,6 @@
 
 
 // assign the div to a variable with JQuery
-
 const $div = $('div')
 console.log($div)
 
@@ -91,12 +90,12 @@ const $li2 = $("<li>").text("2")
 $li3.before($li2)
 
 //create an li with the text of "4" and append it to the ul so that it is after 3 and before 5
+// more condensed version of below - $li3.after($("<li>")).text("4")
 const $li4 = $("<li>").text("4")
 $li3.after($li4)
 
 
-
-//more efficient way
-for (let num of ["1", "2", "3", "4", "5"]){
-
-}
+// //more efficient way
+// for (let num of ["1", "2", "3", "4", "5"]){
+//     $("ul").append($("<li>").text(num))
+// }
