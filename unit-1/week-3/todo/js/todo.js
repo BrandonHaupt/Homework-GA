@@ -19,9 +19,17 @@ function renderTodos(){
 
     // iterates over the data.todos array and appends them to the div
     for (let todo of data.todos) {
+        //creates a individual div
         const $todoDiv = $("<div>").addClass("todo")
         $todoDiv.text(todo)
         $nodes.div.append($todoDiv)
+
+        // add click even to remove todo
+        $todoDiv.on("click", function(event){
+            // Get the text of the thing
+            const text = $(event.target).text()
+            console.log(text)
+        })
     }
 }
 
@@ -41,10 +49,19 @@ $nodes.form.on("submit", function(event){
 
     // Add the todo from the textInput
     addTodo($nodes.textInput.val())
-    
+
     // Empties the form
     $nodes.textInput.val("")
 })
+
+// function removeTodo(){
+//     data.todos.remove()
+// }
+
+// $nodes.div.on("click", function(){
+//     removeTodo($nodes.textInput.val())
+//     $nodes.textInput.val("")
+// })
 
 // Call the function so it can run
 renderTodos()
