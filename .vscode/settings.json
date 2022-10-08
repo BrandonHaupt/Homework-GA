@@ -4,5 +4,8 @@
     "Charmander",
     "Ironman",
     "Squirtle"
-  ]
+  ],
+  "vscode-pets.petSize": "medium",
+  "vscode-pets.petColor": "black",
+  "vscode-pets.position": "explorer"
 }
