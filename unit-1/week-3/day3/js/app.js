@@ -32,3 +32,12 @@ console.log($div)
 
 //Changing the text
 $div.text("This is some new text that is going to appear due to JQuery")
+console.log($div.text()) // this is to show the text in the console
+
+// Change the HTML node
+$div.html("<h1>I have change the inner html</h1>")
+console.log($div.html())
+
+// Changing the style property node
+$div.css("color", "red")
+console.log($div.css("color"))
