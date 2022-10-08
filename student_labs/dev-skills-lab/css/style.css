@@ -27,7 +27,6 @@ div {
     align-items: center;
     flex-direction: column;
     margin: 10px;
-    width: 50%;
 }
 
 input[type="text"] {
@@ -46,4 +45,10 @@ input[type="submit"]{
 
 .skillItems {
     color: #FFC370;
+    
+}
+
+.skillItems :before {
+    list-style-type: "x";
+    background-color: red;
 }
