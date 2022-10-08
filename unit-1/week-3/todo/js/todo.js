@@ -3,7 +3,6 @@ const data = {
     todos: ["Breakfast", "Lunch"],
 }
 
-
 // object to hold main dom nodes
 // We are going to need the div node to place our input[text] in so we grab our form so we can grab our input from there
 const $nodes = {
@@ -28,12 +27,24 @@ function renderTodos(){
 
 // Function for adding todos
  function addTodo(newTodo){
+    // pushing the new Todos to the data todo array
     data.todos.push(newTodo)
+
+    // Rerendering the todos function
     renderTodos()
  }
 
 
- 
+$nodes.form.on("submit", function(event){
+    // Prevent refresh so that we can add to the form
+    event.preventDefault()
+
+    // Add the todo from the textInput
+    addTodo($nodes.textInput.val())
+    
+    // Empties the form
+    $nodes.textInput.val("")
+})
 
 // Call the function so it can run
 renderTodos()
