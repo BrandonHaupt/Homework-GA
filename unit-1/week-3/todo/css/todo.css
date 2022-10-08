@@ -1,8 +1,11 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
-/* 
+
 .todos {
     padding: 10px 0;
-} */
+}
 
+div {
+    padding: 1px 0;
+}
