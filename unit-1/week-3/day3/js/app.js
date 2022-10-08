@@ -54,3 +54,10 @@ const $button = $(`button`) // assigns a button variable to button
 $button.on("click", () => {
     $div.toggleClass("cheese")
 })
+
+// create an image and append to the div
+// document.createElement("img")
+const $img = $(`<img>`) // angle brackets (< , > ) means to create a new Element
+$img.attr("src", "https://images.unsplash.com/photo-1446941611757-91d2c3bd3d45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=802&q=80")
+$div.append($img) // puts the image onto the html page
+console.log($img.attr("src")) // checks to see what our url for the source is
