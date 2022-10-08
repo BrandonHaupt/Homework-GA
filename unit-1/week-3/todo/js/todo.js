@@ -11,6 +11,30 @@ const $nodes = {
     textInput: $(`input[type="text"]`)
 }
 
+//Save the data of the Todo list into the local storage
+function saveTodos() {
+    // turn the data object into a JSON string
+    const json = JSON.stringify(data)
+
+    // save the string in local storage
+    localStorage.setItem("tododata", json)
+}
+
+// Load the local storage save data
+function loadTodos(){
+    // get data from local storage
+    const json = localStorage.getItem("tododata")
+
+    //update data if json isnt undefined
+    if (json) {
+        // parse json string into js object
+        const savedData = JSON.parse(json)
+
+        // update data with the saved array
+        data.todos = savedData.todos
+    }
+}
+
 // Create a function that appends the todos to the div
 function renderTodos(){
 
@@ -33,7 +57,12 @@ function renderTodos(){
             renderTodos()
         })
     }
+
+    // saves the todo
+    saveTodos()
+
 }
+
 
 // Function for adding todos
  function addTodo(newTodo){
@@ -56,14 +85,8 @@ $nodes.form.on("submit", function(event){
     $nodes.textInput.val("")
 })
 
-// function removeTodo(){
-//     data.todos.remove()
-// }
 
-// $nodes.div.on("click", function(){
-//     removeTodo($nodes.textInput.val())
-//     $nodes.textInput.val("")
-// })
 
 // Call the function so it can run
+loadTodos()
 renderTodos()
