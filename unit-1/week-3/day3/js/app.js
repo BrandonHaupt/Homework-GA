@@ -39,5 +39,18 @@ $div.html("<h1>I have change the inner html</h1>")
 console.log($div.html())
 
 // Changing the style property node
-$div.css("color", "red")
+$div.css("color", "red") //Can also use hex and rgba
 console.log($div.css("color"))
+
+// Add a CSS class to the variable
+$div.addClass("cheese")
+
+// Removes a class from the variable
+$div.removeClass("cheese")
+
+// Add an Event and Use toggleClass
+const $button = $(`button`) // assigns a button variable to button
+// creates an onclick event to toggle the class "cheese"
+$button.on("click", () => {
+    $div.toggleClass("cheese")
+})
