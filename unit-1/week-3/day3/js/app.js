@@ -61,3 +61,42 @@ const $img = $(`<img>`) // angle brackets (< , > ) means to create a new Element
 $img.attr("src", "https://images.unsplash.com/photo-1446941611757-91d2c3bd3d45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=802&q=80")
 $div.append($img) // puts the image onto the html page
 console.log($img.attr("src")) // checks to see what our url for the source is
+
+
+/*
+create an li with the text of "1" and append it to the ul
+create an li with the text of "5" and append it the the ul
+create an li with the text of "3" and append it to the ul so that it is after 1 and before 5
+create an li with the text of "2" and append it to the ul so that it is after 1 and before 3
+create an li with the text of "4" and append it to the ul so that it is after 3 and before 5
+*/
+
+//create an li with the text of "1" and append it to the ul
+const $li = $("<li>")
+$li.text("1")
+const $ul = $("ul")
+$ul.append($li)
+
+//create an li with the text of "5" and append it the the ul
+const $li5 = $("<li>").text("5")
+$ul.append($li5)
+
+//create an li with the text of "3" and append it to the ul so that it is after 1 and before 5
+const $li3 = $("<li>").text("3")
+$li5.before($($li3))
+
+//create an li with the text of "2" and append it to the ul so that it is after 1 and before 3
+// more compact - $li.after($("<li>")).text("2")
+const $li2 = $("<li>").text("2")
+$li3.before($li2)
+
+//create an li with the text of "4" and append it to the ul so that it is after 3 and before 5
+const $li4 = $("<li>").text("4")
+$li3.after($li4)
+
+
+
+//more efficient way
+for (let num of ["1", "2", "3", "4", "5"]){
+
+}
