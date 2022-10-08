@@ -28,7 +28,9 @@ function renderTodos(){
         $todoDiv.on("click", function(event){
             // Get the text of the thing
             const text = $(event.target).text()
-            console.log(text)
+            const index = data.todos.indexOf(text)
+            data.todos.splice(index, 1)
+            renderTodos()
         })
     }
 }
