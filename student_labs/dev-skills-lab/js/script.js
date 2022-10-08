@@ -25,7 +25,28 @@ function renderSkills() {
         
         // appending the items to the DOM
         $nodes.div.append($skillDiv)
+
+        $skillDiv.on("")
     }
 }
 
+// Adding a function to allow us to add to the current list
+function addSkills(newSkills) {
+    skill.skills.push(newSkills)
+    renderSkills()
+    console.log(newSkills)
+}
+
+// Allows us to add the skills to the list
+$nodes.form.on("submit", function(event) {
+    // Prevents the refreshing on submit
+    event.preventDefault()
+
+    // takes the value of the textInput and adds it
+    addSkills($nodes.textInput.val())
+
+    $nodes.textInput.val("")
+})
+
+// Render the current list of Skills
 renderSkills()
