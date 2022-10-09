@@ -1,6 +1,7 @@
 import pokemon from './pokemon.json' assert {type: 'json'}
 
-console.log(pokemon)
-pokemon.forEach(poke => {
-    console.log(poke.name)
-});
+console.log(pokemon[1])
+// poke.forEach(pokemon => {
+//     console.log(pokemon.name)
+// });
+console.log(poke.name)
