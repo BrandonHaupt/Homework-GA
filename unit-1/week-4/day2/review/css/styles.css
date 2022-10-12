@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    transition: all .7s;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #272727;
+    font-size: 1.1rem;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 50px 1fr 50px;
+}
+
+header{
+    grid-column: 1/4;
+}
+
+footer{
+    grid-column: 1/4;
+}
+
+
+/* body {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "leftSide main rightSide"
+    "footer footer footer";
+    height: 100vh;
+
+    grid-template-columns: 200px 1fr 200px;
+
+    grid-template-rows: auto 1fr auto;
+}
+
+.header {
+    grid-area: header;
+}
+
+.leftSide {
+    grid-area: leftSide;
+}
+
+.main {
+    grid-area: main;
+}
+
+.rightSide {
+    grid-area: rightSide;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.header, .leftSide, .main, .rightSide, .footer {
+    padding: 10px;
+}
+
+.header, .footer {
+    text-align: center;
+}
+
+@media screen and (max-width: 900px){
+    body {
+        grid-template-areas: 
+            "header header header"
+            "leftSide leftSide leftSide"
+            "main main main"
+            "rightSide rightSide rightSide"
+            "footer footer footer";
+
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 50px 50px 1fr;
+    }
+} */
+
+.green {
+    background-color: lightgreen;
+}
+
+.blue {
+    background-color: lightblue;
+}
+
+.coral {
+    background-color: lightsalmon;
+}
+
+.yellow {
+    background-color: lightgoldenrodyellow;
+}
