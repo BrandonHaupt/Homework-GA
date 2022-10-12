@@ -44,6 +44,7 @@
 header {
     grid-area: header;
     padding: 1rem;
+    text-align: center;
 }
 
 main {
@@ -64,4 +65,5 @@ main {
 footer {
     grid-area: footer;
     padding: 20px;
+    text-align: center;
 }
