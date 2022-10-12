@@ -19,21 +19,21 @@
 *************************** */
 
 .one {
-    background-color: red;
+    background-color: #fb5b6b;
     grid-area: one;
   }
   
   .two {
-    background-color: green;
+    background-color: #ffbdb0;
     grid-area: two;
   }
   
   .three {
-    background-color: blue;
+    background-color: #2676a1;
     grid-area: three;
   }
   
   .four {
-    background-color: yellow;
+    background-color: #ffeb48;
     grid-area: four;
   }
