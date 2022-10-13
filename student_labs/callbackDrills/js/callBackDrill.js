@@ -34,20 +34,22 @@
 
 
 const wordReverse = (word) => {
-    let reverse = word.split(" ").reverse(" ").join(" ")
-    console.log(reverse)
+    console.log(word.split(" ").reverse("").join(" "))
+    // console.log(reverse)
 }
 
 const toUpperCase = (word) => {
     console.log(word.toUpperCase())
 }
 
+// console.log(toUpperCase("tacos"))
+
 const repMaster = (param, param2) => {
-    param(`${param2()} proves that I am the rep MASTER!`)
+    (param2(param) + " proves that I am the rep MASTER!")
 }
 
 //"blockhead a to heart your give never proves that I am the rep MASTER!"
-// repMaster("Never give your heart to a blockhead", wordReverse);
+repMaster("Never give your heart to a blockhead", wordReverse);
 
 //"I FINISHED THIS PRACTICE proves that I am the rep MASTER
 repMaster("I finished this practice", toUpperCase);
