@@ -6,3 +6,50 @@
 .header {
     color: red;
 }
+
+.header:hover {
+    transition: all .4s;
+    color: blue;
+}
+
+button {
+    border: 1px solid black;
+    background-color: none;
+    border-radius: 3px;
+}
+
+.hoverOverMe:hover {
+    background-color: red;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.hoverOverMe:active{
+    background-color: blue;
+    color: white;
+}
+
+.image-container {
+    height: 200px;
+    width: 200px;
+}
+
+.random-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.textTransform {
+    text-transform: uppercase;
+}
+
+.text {
+    width: 400px;
+    background-color: yellow;
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
