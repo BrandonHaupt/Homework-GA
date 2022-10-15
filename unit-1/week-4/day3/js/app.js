@@ -1,0 +1,3 @@
+const higherOrderFunction = callback => {
+    callback()
+}
