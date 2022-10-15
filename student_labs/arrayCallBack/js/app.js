@@ -33,7 +33,7 @@ console.log(capitalizedMinions)
 const actuallyCapitalizedMinions = []
 
 const grusNotHappy = minions.filter((min) => {
-    return actuallyCapitalizedMinions.push() !== min.toUpperCase()
+    return actuallyCapitalizedMinions.push() === min.toUpperCase()
  })
 
 
