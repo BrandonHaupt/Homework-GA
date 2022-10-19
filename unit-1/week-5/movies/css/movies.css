@@ -1,0 +1,33 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+}
+
+h1, .movieSearch, .m {
+    text-align: center;
+}
+/* 
+.m {
+    text-align: center;
+} */
+
+#mText {
+    border-radius: 15px;
+    border: 2px solid black;
+    padding: 5px 10px;
+}
+
+.mButton {
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(43, 89, 226);
+    color: white;
+    padding: 5px 20px;
+}
+
+.mButton:hover {
+    background-color: blueviolet;
+    cursor: pointer;
+}
