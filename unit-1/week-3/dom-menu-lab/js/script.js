@@ -40,3 +40,6 @@ topMenuLinks.addEventListener("click", function(event) {
 })
 
 console.log(topMenuLinks)
+
+
+
