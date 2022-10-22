@@ -1,6 +1,15 @@
 {
-  "cSpell.words": ["Bulbasaur", "Charmander", "Ironman", "nums", "Squirtle"],
+  "cSpell.words": [
+    "Bulbasaur",
+    "Charmander",
+    "Ironman",
+    "nums",
+    "Pokedex",
+    "Squirtle",
+    "Wireframe"
+  ],
   "vscode-pets.petSize": "medium",
   "vscode-pets.petColor": "black",
-  "vscode-pets.position": "explorer"
+  "vscode-pets.position": "explorer",
+  "liveServer.settings.port": 5501
 }

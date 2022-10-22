@@ -9,7 +9,7 @@ function movieSearch(title){
     
     // making the url for request
     const url = `${baseURL}?t=${title}&apikey=${apiKey}`
-    console.log(url)
+    // console.log(url)
 
     // making the request
     // we dont need a promise because we dont need to use it afterwards
