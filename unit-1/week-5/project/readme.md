@@ -11,4 +11,4 @@ A web application that will display pokemon data using the pokemon API
 
 ## Wireframe
 
-![pokedex wireframe](https://imgur.com/gallery/uie2zHi)
+![pokedex wireframe](https://i.imgur.com/HIRk4dE.png)
