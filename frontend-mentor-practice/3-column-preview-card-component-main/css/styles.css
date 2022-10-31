@@ -1,0 +1,61 @@
+/* Feel free to remove these styles or customise in your own stylesheet 👍 */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-size: 15px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 75%;
+    margin: auto;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', sans-serif;
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;;
+}
+
+.sedans-container {
+    background-color: hsl(31, 77%, 52%);
+    height: 600px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    border: 2px solid white;
+    background-color: white;
+    color: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: none;
+}
+
+img {
+    width: 80px;
+}
