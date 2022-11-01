@@ -18,15 +18,21 @@ main {
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     width: 65%;
     margin: auto;
 }
 
-h1 {
+.sedans-title, .suvs-title, .luxury-title {
     font-family: 'Big Shoulders Display', sans-serif;
     font-weight: 700;
     font-size: 2.5rem;
-    margin: -10px 0;
 }
 
 p {
@@ -63,15 +69,15 @@ p {
     border-radius: 0 10px 10px 0;
 }
 
-.sedans-container button {
+#sedan-button a{
     color: hsl(31, 77%, 52%);
 }
 
-.suvs-container button {
+#suvs-button a {
     color: hsl(184, 100%, 22%);
 }
 
-.luxury-container button {
+#lux-button a{
     color: hsl(179, 100%, 13%);
 }
 
@@ -84,16 +90,26 @@ button {
     font-weight: 700;
 }
 
-button:hover {
+#sedan-button:hover{
     cursor: pointer;
     background-color: transparent;
     border: 2px solid white;
     color: white;
 }
 
+a {
+    text-decoration: none;
+}
+
 img {
     width: 80px;
 }
+
+
+
+
+
+
 
 @media screen and (max-width: 375px) {
     main {
