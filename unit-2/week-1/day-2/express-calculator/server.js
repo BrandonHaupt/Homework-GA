@@ -3,7 +3,7 @@ const app = express()
 const port = 3000
 
 app.get('/', (request, response) => {
-    response.send('Testicles')
+    response.send('Listening')
 })
 
 app.get(`/calc`, (request, response) => {
@@ -12,6 +12,7 @@ app.get(`/calc`, (request, response) => {
             <link rel="stylesheet" href="./css/styles.css">
         </head>
 
+        <h1>Heeellllooooooo, how's it going!</h1>
     `)
 })
 
