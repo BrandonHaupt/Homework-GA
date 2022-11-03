@@ -6,7 +6,7 @@ app.get('/', (request, response) => {
     response.send('Listening')
 })
 
-app.get(`/calc`, (request, response) => {
+app.get(`/:calc`, (request, response) => {
     response.send(`
         <head>
             <link rel="stylesheet" href="./css/styles.css">
