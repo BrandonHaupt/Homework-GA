@@ -17,7 +17,7 @@ app.get(`/awesome`, (req, res) => {
 })
 
 app.get('/hello/:firstname/:lastname', (request, response) => {
-    response.send(`hello my name is ${request.params.firstname} ${request.params.lastname}`)
+    response.send(`Hello my name is ${request.params.firstname} ${request.params.lastname}`)
 })
 
 
@@ -29,6 +29,12 @@ app.get('/:indexOfPlantsArray', (request, response) => {
     } else {
         response.send(`Cannot find anything in Index ${request.params.indexOfPlantsArray}`)
     }
+})
+
+// req.query
+// You can add request.query.(something here like title) and then you can request.query.title. Once done in the url do http://localhost:3000/queryexample/Brandon/Haupt?title=Dragon%20Lord to be able to show what your title is
+app.get(`/queryexample/:firstname/:lastname`, (request, response) => {
+    response.send(`Hello my name is ${request.params.firstname} ${request.params.lastname} and my title is ${request.query.title} and my house is ${request.query.house}`)
 })
 
 // will not reach this ever because of the : in the above app.get
