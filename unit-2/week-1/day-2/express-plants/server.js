@@ -2,9 +2,41 @@ const express = require('express')
 const app = express()
 const PORT = 3000
 
-app.get(`/`, (res, req) => {
-    req.send(`Server is up! :D`)
+const plants = [
+    "Monstera Deliciosa", 
+    "Corpse Flower", 
+    "Elephant-Foot Yam", 
+    "Witches' Butter"
+]
+
+app.get(`/awesome`, (req, res) => {
+    res.send(`
+        <h1>Plants are awesome!</h1>
+        <img src="https://static.boredpanda.com/blog/wp-content/uuuploads/plant-sculptures-mosaicultures-internationales-de-montreal/plant-sculptures-mosaicultures-internationales-de-montreal-14.jpg" >
+    `)
 })
+
+app.get('/hello/:firstname/:lastname', (request, response) => {
+    response.send(`hello my name is ${request.params.firstname} ${request.params.lastname}`)
+})
+
+
+app.get('/:indexOfPlantsArray', (request, response) => {
+    // Cannot have 2 response.sends it will only send one response
+    // .send is like a return in a function, it stops after it is sent
+    if(plants[request.params.indexOfPlantsArray]){
+        response.send(plants[request.params.indexOfPlantsArray])
+    } else {
+        response.send(`Cannot find anything in Index ${request.params.indexOfPlantsArray}`)
+    }
+})
+
+// will not reach this ever because of the : in the above app.get
+// app.get(`/awesome`, (req, res) => {
+//     res.send(`
+//         <h1>Plants are awesome!</h1>
+//     `)
+// })
 
 app.listen(PORT, () => {
     console.log(`listening on port: ${PORT}`)
