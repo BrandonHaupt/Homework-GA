@@ -8,9 +8,15 @@ app.get(`/`, (res, req) => {
     `)
 })
 
-app.get(`/:free_samples`, (res, req) => {
+// the : becomes a param
+///:ia/:instructor will print out { ia: david, instructor: 'Hisham'}
+app.get(`/:ia/:instructor`, (res, req) => {
 
+    // Will console out anything after the "/"
     console.log(res.params.free_samples)
+
+    // logs out {free_samples: 'David'} or what ever is put after the "/"
+    console.log(res.params)
 
     req.send(`
         <h1>Free Samples!!</h1>
