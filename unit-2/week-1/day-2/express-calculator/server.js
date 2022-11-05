@@ -5,7 +5,16 @@ const app = express()
 const PORT = process.env.PORT
 
 app.get('/', (request, response) => {
-    response.send('Listening')
+    response.send(`
+        <h1>Please choose the following</h1>
+        <ul>
+            <li>add</li>
+            <li>sub/subtract</li>
+            <li>multiply/mult</li>
+            <li>divide/div</li>
+            <li>exponent</li>
+        </ul>
+    `)
 })
 
 app.get(`/calcquery/:num1/:num2`, (request, response) => {
