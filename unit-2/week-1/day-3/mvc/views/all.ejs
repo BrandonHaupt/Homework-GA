@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fruits App</title>
+    <link href="/css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>All Fruits</h1>
+    <ul>
+        <!-- This creates a stringified fruits -->
+      <!-- <%= JSON.stringify(fruits) %> -->
+      <!-- This makes a unordered list -->
+      <% fruits.forEach(v=>{ %>
+      <li>
+        <!-- This adds in the fruits name -->
+        <%=v.name %>
+      </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
