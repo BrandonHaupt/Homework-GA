@@ -48,6 +48,10 @@ app.delete(`/delete/:ind`, (req, res) => {
     res.send(fruits)
 })
 
+app.put(`/fruit/:ind`, (req, res) => {
+    fruits[req.params.ind] = req.body
+    res.send(fruits)
+})
 
 app.listen(PORT, () => {
     console.log(`listening on port ${PORT}`);
