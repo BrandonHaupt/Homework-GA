@@ -2,6 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 
+const PORT = process.env.PORT
+
 const fruits = [
     {
         name: "apple",
@@ -28,6 +30,6 @@ app.get("/fruits/:indexOfFruitsArray", (req, res) => {
     res.send(fruits[req.params.indexOfFruitsArray]);
 });
 
-app.listen(process.env.PORT, () => {
-    console.log(`listening on port ${process.env.PORT}`);
+app.listen(PORT, () => {
+    console.log(`listening on port ${PORT}`);
 });
