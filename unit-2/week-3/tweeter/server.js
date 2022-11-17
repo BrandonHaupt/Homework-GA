@@ -43,13 +43,36 @@ app.get('/tweets', (req,res)=> {
     })
 })
 
+// DELETE ROUTE
+app.delete('/tweets/:id', (req,res) => {
+    // finds the tweet by the id and then will either give us an error or it will delete the tweet
+    Tweet.findByIdAndDelete(req.params.id, (error, deletedTweet) => {
+        console.log(deletedTweet)
+        res.send({success: true})
+    })
+})
+
+// UPDATE ROUTE
+app.put('/tweets/:id', (req,res) => {
+    Tweet.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        {new: true}, // <-- will give us the new, most up to date version
+        (error, updatedTweet) => {
+            res.send(updatedTweet)
+        }
+    )
+})
 
 
 
-// SHOW ROUTE
+// SHOW ROUTE - This will get the tweet that we want
 app.get('/tweets/:id', (req,res) => {
     Tweet.findById(req.params.id, (error, foundTweet) => {
         res.send(foundTweet)
+        // vv - Can also be {foundTweet} because they are the first and 2nd thing are the same - vv
+        // res.render('tweet_show', {foundTweet: foundTweet})
+        // ^^ - Can also be {foundTweet} because they are the first and 2nd thing are the same
     })
 })
 
