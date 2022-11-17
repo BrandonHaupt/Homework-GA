@@ -16,11 +16,16 @@ app.use(express.json()) // allows for the ability to parse JSON from POSTMAN
 const mongoose = require('mongoose')
 const db = mongoose.connection
 
-
 mongoose.connect(DATABASE_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
+
+// DATABASE connection Error/Success
+// DEFINE callback functions for various events
+db.on('error', (err) => console.log(`${err.message} is mongo not runnnig?`))
+db.on('connected', () => console.log(`Mongo connected!`))
+db.on('disconnected', () => console.log('Mongo disconnected!'))
 
 
 // ROUTES / CONTROLLERS
@@ -77,11 +82,7 @@ app.get('/tweets/:id', (req,res) => {
 })
 
 
-// DATABASE connection Error/Success
-// DEFINE callback functions for various events
-db.on('error', (err) => console.log(`${err.message} is mongo not runnnig?`))
-db.on('connected', () => console.log(`Mongo connected!`))
-db.on('disconnected', () => console.log('Mongo disconnected!'))
+
 
 
 // Listener
