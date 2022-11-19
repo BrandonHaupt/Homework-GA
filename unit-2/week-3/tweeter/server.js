@@ -4,6 +4,10 @@ const app = express()
 const PORT = process.env.PORT
 const DATABASE_URL = process.env.DATABASE_URL
 
+// The order of how the express app should be written
+// Index, New, Delete, Update, Create, Edit, Show
+
+
 // Dependencies
 const Tweet = require('./models/tweet.js')
 
@@ -70,6 +74,41 @@ app.put('/tweets/:id', (req,res) => {
 })
 
 
+// SEED ROUTE
+app.get('/tweets/seed', (req,res) => {
+    Tweet.create([
+        {
+            "title": "Games are THE best",
+            "body": "It makes me a happy camper",
+            "author": "Game R"
+        },
+        {
+            "title": "Coco",
+            "body": "Amazing",
+            "author": "Game R"
+        },
+        {
+            "title": "PS5",
+            "body": "It makes me interested",
+            "author": "Game R"
+        },
+        {
+            "title": "Incredibles",
+            "body": "Create movie",
+            "author": "Game R"
+        },
+        {
+            "title": "Sushi Is AMAZING",
+            "body": "Its very very yummy!",
+            "author": "Game R"
+        }
+    ], (error, seededTweet) => {
+        res.send(seededTweet)
+    })
+})
+
+
+
 
 // SHOW ROUTE - This will get the tweet that we want
 app.get('/tweets/:id', (req,res) => {
@@ -80,9 +119,6 @@ app.get('/tweets/:id', (req,res) => {
         // ^^ - Can also be {foundTweet} because they are the first and 2nd thing are the same
     })
 })
-
-
-
 
 
 // Listener
