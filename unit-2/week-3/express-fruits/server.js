@@ -15,12 +15,38 @@ const app = express()
 /////////////////////////////////////////
 app.use(morgan('tiny')) // Logging errors and stuff
 app.use(methodOverride('_method')) // Allows us to use DELETE and other methods
-app.use('/static', express.static('public')) // Allows the use for css
 app.use(express.urlencoded({extended: true})) // Allows us to grab and use form data
+app.use('/static', express.static('public')) // Allows the use for css
 
 
+/////////////////////////////////////////
+//               ROUTES                //
+/////////////////////////////////////////
+app.get('/', (req,res) => {
+    res.send('Your server is running!')
+})
 
 
+app.get('/fruits/seed', (req,res) => {
+
+    // DEFINE DATA WE WANT TO PUT IN THE DATABASE
+    const startFruits = [
+        {name: "Orange", color: "orange", readyToEat: false},
+        {name: "Grape", color: "purple", readyToEat: false},
+        {name: "Banana", color: "yellow", readyToEat: false},
+        {name: "Strawberry", color: "red", readyToEat: false},
+        {name: "Coconut", color: "brown", readyToEat: false},
+    ]
+
+    // DELETES ALL FRUITS
+    Fruit.deleteMany({}, (err, data) => {
+        // SEED STARTER FRUITS
+        Fruit.create(startFruits, (err, data) => {
+            // send created fruits as reponse to confirm creation
+            res.json(data)
+        })
+    })
+})
 
 
 
