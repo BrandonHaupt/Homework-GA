@@ -184,7 +184,9 @@ const CONFIG = {
 }
 
 
-// ESTABLISH OUR CONNECTION
+/////////////////////////////////////////
+//      ESTABLISHING A CONNECTION      //
+/////////////////////////////////////////
 mongoose.connect(DATABASE_URL, CONFIG)
 
 mongoose.connection
@@ -193,8 +195,7 @@ mongoose.connection
     .on('error', (error) => console.log(error))
 
 
-
-
+    
 /////////////////////////////////////////
 //         FRUITS MODELS               //
 /////////////////////////////////////////
