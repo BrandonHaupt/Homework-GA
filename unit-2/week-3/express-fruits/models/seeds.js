@@ -22,6 +22,7 @@ mongoose.connection.on('open', () => {
             console.log(data)
             // send created fruits as reponse to confirm creation
             // res.json(data)
+            mongoose.connection.close()
         })
     })
 

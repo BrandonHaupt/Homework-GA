@@ -1,0 +1,11 @@
+.border-primary-400 {
+    border: 2px solid #a775f1
+}
+
+.testomonial-grid {
+    display: grid;
+
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+}

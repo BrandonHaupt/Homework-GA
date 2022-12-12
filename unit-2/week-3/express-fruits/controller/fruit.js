@@ -81,8 +81,6 @@ router.get('/fruits/:id/edit' ,(req,res) => {
     // gets the id from params
     const id = req.params.id
 
-    
-    
     // get the fruit from the database
     Fruit.findById(id, (err, fruit) => {
         // Renders the templatte and send it to fruit
